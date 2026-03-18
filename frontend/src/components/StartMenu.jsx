@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Cloud, Search, FileText, Table, Presentation, HardDrive, Music } from 'lucide-react';
+import { Cloud, Search, FileText, Table, Presentation, HardDrive, Music, Gamepad2, Brain } from 'lucide-react';
 import { getFS } from '../utils/fs';
 
 const StartMenu = ({ isOpen, onClose, onLogout, onAppContextMenu, onAppClick, user }) => {
@@ -15,6 +15,8 @@ const StartMenu = ({ isOpen, onClose, onLogout, onAppContextMenu, onAppClick, us
     { name: "Notepad", type: 'notepad', color: "bg-gray-600/40", icon: <FileText className="w-5 h-5 text-blue-400" />, textColor: "text-blue-400" },
     { name: "MeghExplorer", type: 'meghexplorer', color: "bg-blue-600/40", icon: <Cloud className="w-5 h-5 text-white" />, textColor: "text-blue-200" },
     { name: "File Explorer", type: 'filemanager', color: "bg-yellow-600/40", icon: <HardDrive className="w-5 h-5 text-yellow-400" />, textColor: "text-yellow-400" },
+    { name: "Tic Tac Toe", type: 'tictactoe', color: "bg-sky-600/40", icon: <Gamepad2 className="w-5 h-5 text-sky-400" />, textColor: "text-sky-400" },
+    { name: "Memory Game", type: 'memorygame', color: "bg-rose-600/40", icon: <Brain className="w-5 h-5 text-rose-400" />, textColor: "text-rose-400" },
   ];
 
   const pinnedApps = allApps.slice(0, 4);

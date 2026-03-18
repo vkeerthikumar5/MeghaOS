@@ -12,7 +12,9 @@ import MeghPlayer from './MeghPlayer';
 import MeghExplorer from './MeghExplorer';
 import FileManager from './FileManager';
 import TaskManager from './TaskManager';
-import { FileText, Table, Presentation, HardDrive, Trash2, Recycle, RotateCcw, Cloud, Globe, Music, Activity } from 'lucide-react';
+import TicTacToe from './TicTacToe';
+import MemoryGame from './MemoryGame';
+import { FileText, Table, Presentation, HardDrive, Trash2, Recycle, RotateCcw, Cloud, Globe, Music, Activity, Gamepad2, Brain } from 'lucide-react';
 import { getFS, createFile, deleteFile, moveFile } from '../utils/fs';
 
 const Desktop = ({ user }) => {
@@ -52,6 +54,8 @@ const Desktop = ({ user }) => {
     },
     { id: 'recyclebin', name: "Recycle Bin", color: "bg-gray-500/30", icon: <Recycle className="w-6 h-6 text-emerald-400" />, type: 'recyclebin' },
     { id: 'meghplayer', name: "Megh Player", color: "bg-purple-600/30", icon: <Music className="w-6 h-6 text-purple-400" />, type: 'meghplayer' },
+    { id: 'tictactoe_desktop', name: "Tic Tac Toe", color: "bg-sky-600/30", icon: <Gamepad2 className="w-6 h-6 text-sky-400" />, type: 'tictactoe' },
+    { id: 'memorygame_desktop', name: "Memory Game", color: "bg-rose-600/30", icon: <Brain className="w-6 h-6 text-rose-400" />, type: 'memorygame' },
   ]);
 
   const appIcons = {
@@ -63,6 +67,8 @@ const Desktop = ({ user }) => {
     filemanager: <HardDrive className="w-6 h-6 text-blue-400" />,
     meghexplorer: <Cloud className="w-6 h-6 text-white shadow-sm" />,
     taskmanager: <Activity className="w-6 h-6 text-red-400" />,
+    tictactoe: <Gamepad2 className="w-6 h-6 text-sky-400" />,
+    memorygame: <Brain className="w-6 h-6 text-rose-400" />,
     audio: <Music className="w-6 h-6 text-purple-400" />
   };
 
@@ -75,6 +81,8 @@ const Desktop = ({ user }) => {
     filemanager: <HardDrive className="w-4 h-4 text-blue-400" />,
     meghexplorer: <Cloud className="w-4 h-4 text-white shadow-sm" />,
     taskmanager: <Activity className="w-4 h-4 text-red-400" />,
+    tictactoe: <Gamepad2 className="w-4 h-4 text-sky-400" />,
+    memorygame: <Brain className="w-4 h-4 text-rose-400" />,
     audio: <Music className="w-4 h-4 text-purple-400" />
   };
 
@@ -322,6 +330,8 @@ const Desktop = ({ user }) => {
               />
             )}
             {win.type === 'meghexplorer' && <MeghExplorer />}
+            {win.type === 'tictactoe' && <TicTacToe />}
+            {win.type === 'memorygame' && <MemoryGame />}
             {win.type === 'filemanager' && (
               <FileManager
                 refreshKey={refreshKey}
