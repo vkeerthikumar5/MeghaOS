@@ -1,0 +1,47 @@
+{
+  "name": "sprakash---task",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-decoupled-document": "^41.4.2",
+    "@ckeditor/ckeditor5-react": "^11.0.1",
+    "@fortune-sheet/react": "^1.0.4",
+    "@jspreadsheet/react": "^12.3.11",
+    "@syncfusion/ej2-react-documenteditor": "^33.1.44",
+    "@syncfusion/ej2-react-spreadsheet": "^33.1.44",
+    "@tailwindcss/vite": "^4.2.1",
+    "axios": "^1.13.6",
+    "fabric": "^7.2.0",
+    "framer-motion": "^12.38.0",
+    "jspreadsheet-ce": "^5.0.4",
+    "lucide-react": "^0.577.0",
+    "quill": "^2.0.3",
+    "react": "^19.2.4",
+    "react-color": "^2.19.3",
+    "react-dom": "^19.2.4",
+    "react-draggable": "^4.5.0",
+    "react-quill": "^2.0.0",
+    "reveal.js": "^6.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.0",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1",
+    "vite": "^8.0.0"
+  }
+}
