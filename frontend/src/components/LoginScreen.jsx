@@ -13,10 +13,10 @@ const LoginScreen = ({ onLogin }) => {
     e.preventDefault();
     setLoading(true);
     setError('');
-    
+
     try {
       const endpoint = isRegister ? '/api/users/register' : '/api/users/login';
-      const response = await axios.post(`http://localhost:5000${endpoint}`, {
+      const response = await axios.post(`https://meghaos.onrender.com${endpoint}`, {
         username,
         password
       });
@@ -101,7 +101,7 @@ const LoginScreen = ({ onLogin }) => {
         <div className="mt-8 pt-8 border-t border-white/5 text-center">
           <p className="text-gray-400 text-sm">
             {isRegister ? 'Already have an account?' : "Don't have an account?"}{' '}
-            <button 
+            <button
               onClick={() => { setIsRegister(!isRegister); setError(''); }}
               className="text-blue-400 hover:underline font-bold ml-1"
             >

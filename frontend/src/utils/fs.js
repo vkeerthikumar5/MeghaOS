@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/files';
+const API_URL = 'https://meghaos.onrender.com/api/files';
 
 const getHeaders = () => {
   const token = localStorage.getItem('token');
@@ -37,7 +37,7 @@ export const createFile = async (name, type, parentId) => {
 
 export const deleteFile = async (id) => {
   try {
-    await fetch(`${API_URL}/${id}`, { 
+    await fetch(`${API_URL}/${id}`, {
       method: 'DELETE',
       headers: getHeaders()
     });
