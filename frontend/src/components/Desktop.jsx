@@ -267,7 +267,7 @@ const Desktop = ({ user }) => {
                   y: e.clientY,
                   type: 'app',
                   options: [
-                    { label: 'Open', icon: appIconsSmall[appType], onClick: () => { openApp(appType); setContextMenu(prev => ({ ...prev, visible: false })); } },
+                    { label: 'Open', icon: appIconsSmall[appType], onClick: () => { openApp(appType); } },
                     { type: 'separator' },
                     {
                       label: 'Pin to Taskbar',
@@ -281,7 +281,6 @@ const Desktop = ({ user }) => {
                             color: app.color.replace('/40', '/20')
                           }]);
                         }
-                        setContextMenu(prev => ({ ...prev, visible: false }));
                       }
                     }
                   ]
@@ -385,7 +384,7 @@ const Desktop = ({ user }) => {
                               {
                                 label: 'Restore',
                                 icon: <RotateCcw className="w-4 h-4 text-emerald-400" />,
-                                onClick: () => { handleRestore(item); setContextMenu(prev => ({ ...prev, visible: false })); }
+                                onClick: () => { handleRestore(item); }
                               },
                               {
                                 label: 'Delete Permanently',
@@ -395,7 +394,6 @@ const Desktop = ({ user }) => {
                                     await deleteFile(item._id);
                                     setRecycleBin(prev => prev.filter(i => i._id !== item._id));
                                   }
-                                  setContextMenu(prev => ({ ...prev, visible: false }));
                                 }
                               },
                             ]
@@ -436,7 +434,7 @@ const Desktop = ({ user }) => {
             y: e.clientY,
             type: 'app',
             options: [
-              { label: 'Open', icon: appIconsSmall[appType], onClick: () => { openApp(appType); setContextMenu(prev => ({ ...prev, visible: false })); } },
+              { label: 'Open', icon: appIconsSmall[appType], onClick: () => { openApp(appType); } },
               { type: 'separator' },
               {
                 label: 'Pin to Taskbar',
@@ -450,7 +448,6 @@ const Desktop = ({ user }) => {
                       color: app.color.replace('/40', '/20') // slightly less opaque
                     }]);
                   }
-                  setContextMenu(prev => ({ ...prev, visible: false }));
                   setIsStartOpen(false);
                 }
               },
@@ -467,7 +464,6 @@ const Desktop = ({ user }) => {
                       color: app.color
                     }]);
                   }
-                  setContextMenu(prev => ({ ...prev, visible: false }));
                   setIsStartOpen(false);
                 }
               },

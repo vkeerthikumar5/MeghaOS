@@ -16,7 +16,10 @@ const ContextMenu = ({ x, y, options, visible, onClose }) => {
           ) : (
             <button
               className="w-full flex items-center gap-3 px-3 py-2 text-sm text-white/90 hover:bg-white/10 rounded-lg transition-colors group relative"
-              onClick={option.onClick}
+              onClick={() => {
+                option.onClick();
+                onClose && onClose();
+              }}
             >
               {option.icon && <span className="text-white/40 group-hover:text-blue-400 transition-colors">{option.icon}</span>}
               <span className="flex-1 text-left">{option.label}</span>
